@@ -46,9 +46,7 @@ self.addEventListener('fetch', e => {
         //   If the connection drops the catch will will be called
       })
       .catch(err => {
-        caches.match(e.request).then(() => {
-          return response;
-        });
+        caches.match(e.request).then(response => response);
       })
   );
 });
