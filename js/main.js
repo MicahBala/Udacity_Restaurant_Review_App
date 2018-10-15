@@ -217,3 +217,17 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
+/*
+=== Service Worker Registration ===
+*/
+// Make sure service worker is supported.
+
+if ('serviceWorker' in navigator) {
+  // Register Service Worker when the window loads
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('./sw_cache.js')
+      .then(reg => console.log('Service Worker Registered!'))
+      .catch(err => console.log(`Service Worker: ${err}`));
+  });
+}

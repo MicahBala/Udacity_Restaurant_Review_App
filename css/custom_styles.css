@@ -75,30 +75,6 @@ nav h1 {
   width: 100%;
 }
 
-/* Main Content */
-.inside #maincontent {
-  /* display: flex;
-  justify-content: center; */
-}
-
-/* .inside #maincontent #map-container,
-.inside #maincontent #restaurant-container,
-.inside #maincontent #reviews-container {
-  order: 10;
-}
-
-.inside #maincontent #restaurant-container {
-  order: 1;
-}
-
-.inside #maincontent #map-container {
-  order: 3;
-}
-
-.inside #maincontent #reviews-container {
-  order: 2;
-} */
-
 /* Footer */
 .inside #footer {
   width: 100%;
@@ -172,6 +148,9 @@ nav h1 {
 
 /* Media Queries */
 @media screen and (max-width: 600px) {
+  .filter-options {
+    height: 140px;
+  }
   .inside #map-container {
     width: 100%;
     position: static;
@@ -199,5 +178,15 @@ nav h1 {
 
   .inside #reviews-container h2 {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .inside #restaurant-container {
+    width: 100%;
+  }
+
+  .inside #reviews-container {
+    width: 100%;
   }
 }
